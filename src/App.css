@@ -14,19 +14,24 @@ body {
 }
 button {
   display: block;
-  padding: 5px;
+  padding: 5px 10px;
   margin: 0 auto;
-  border: 1px #222 solid;
+  border: 1px rgb(33, 51, 77) solid;
   border-radius: 5px;
   background: none;
+  outline: none;
+  color: rgb(117, 137, 168);
 }
 #root {
   width: 100%;
+  margin: 0 auto;
+  max-width: 800px;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  background-color: rgb(6, 3, 29);
 }
 .wrapper {
   width: 90%;
@@ -37,8 +42,6 @@ button {
   justify-content: flex-start;
   align-items: center;
   border-radius: 5px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1),
-    inset 2px 2px 5px rgba(255, 255, 255, 0.6), -2px -2px 2px rgba(0, 0, 0, 0.1);
 }
 .form {
   display: flex;
@@ -54,11 +57,24 @@ button {
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 5px;
   text-align: center;
+  transition: 0.3s;
+  /* opacity: 0; */
+}
+.alert-txt-green {
+  background-color: rgba(46, 139, 87, 0.6);
+  color: greenyellow;
+  opacity: 1;
+}
+.alert-txt-red {
+  background-color: rgba(139, 57, 46, 0.6);
+  color: red;
+  opacity: 1;
 }
 
 h3 {
   font-size: 1.5rem;
   padding: 5px;
+  color: #ddd;
 }
 
 .form-control {
@@ -72,6 +88,12 @@ h3 {
   margin-right: 10px;
   border-radius: 5px;
   border: none;
+  background: rgb(117, 137, 168);
+  outline: none;
+  color: black;
+}
+.name-input::placeholder {
+  color: rgb(46, 58, 110);
 }
 .list-container {
   width: 100%;
@@ -79,23 +101,32 @@ h3 {
   padding: 10px 20px;
 }
 .item {
+  padding: 5px 10px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   margin: 5px 0;
-  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 5px;
+  background-color: rgba(46, 58, 110, 0.6);
+  color: #ddd;
 }
 .btn-container {
   display: flex;
 }
 .clear-btn {
+  margin-top: 20px;
   padding: 5px 20px;
 }
 .erase,
 .edit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: none;
   margin: 0 3px;
   padding: 0;
   font-size: 1.3rem;
-  /* height: inherit; */
-  /* background-color: red; */
+}
+.edit {
+  transform: translateY(-0.5px);
 }
